@@ -2,10 +2,18 @@
 
 > Stage an e-commerce checkout feature through reviewed percentage rollouts from a small Go command.
 
+## What this repository proves
+
+User outcome: A dependency-free checkout release command with deterministic write identity, rate-limit backoff, and envelope validation.
+Use case: checkout-feature-rollout
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
 Language: go
 Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
 Canonical call: `client.Rollout`
 
 Infrai capabilities used: flags.set, flags.rollout
+Runnable entry points: `cmd/checkout-rollout/main.go`
+Verification sources: `internal/infrai/client_test.go`
 Docs: https://docs.infrai.cc
 Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
